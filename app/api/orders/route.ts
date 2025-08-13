@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '@/lib/supabaseClient';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: NextRequest) {
   // TODO: query orders for a given user_id from query params
   // join with products to get product name + total price
-  res.status(200).json({ data: [] });
+  return NextResponse.json({ data: [] });
 }
